@@ -8,7 +8,7 @@ config = configparser.ConfigParser()
 config.read("config.ini")
 pins = json.loads(config.get("GPIO", "SPI"))
 
-# export gpio pins (need +x priviledge in /sys/class/gpio/export)
+# export gpio pins (in some cases need: chmod 600 /sys/class/gpio/export)
 pinCLK = gpio.GPIOPin(pins[0], gpio.OUT) # Serial Clock (output from master)
 pinSDO = gpio.GPIOPin(pins[1], gpio.IN)  # Master In Slave Out (data output from slave)
 pinSDI = gpio.GPIOPin(pins[2], gpio.OUT) # Master Out Slave In (data output from master)
