@@ -17,9 +17,9 @@ Using of these codes in your project is super easy:
 ```
 git clone https://github.com/ehsanmir/Simple-SPI-over-GPIO-in-Python
 ```
-2. Import selected pins in the config.ini file.
+3. Import selected gpio pin numbers in the config.ini file.
 
-3. Now you can run something like this: 
+4. Now you can run something like this: 
 
 ```
 from spi import *
